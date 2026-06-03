@@ -18,6 +18,26 @@ settings:
         type: class-toggle
 
     -
+        # Accent themes
+
+        id: accent-themes
+        title: Accent themes
+        description: Spot-highlight notes by topic. Vibrant colors used sparingly, per GitHub brand guidance.
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: copilot-accent
+        title: Copilot accent
+        description: 'Highlight AI callouts and tags with Copilot Purple. Triggers — callouts: [!ai], [!copilot], [!gpt], [!llm], [!prompt]; tags: #ai, #copilot, #gpt, #llm, #prompt (with nested variants).'
+        type: class-toggle
+    -
+        id: security-accent
+        title: Security accent
+        description: 'Highlight sensitive callouts and tags with Security Blue. Triggers — callouts: [!security], [!secret], [!encrypted], [!private], [!vault]; tags: #security, #secret, #encrypted, #private, #vault (with nested variants).'
+        type: class-toggle
+
+    -
         # Colorblind
 
         id: colorblind
@@ -1698,4 +1718,59 @@ div.status-bar-item.plugin-obsidian-vimrc-support.vimrc-support-vim-mode[data-vi
 }
 div.status-bar-item.plugin-obsidian-vimrc-support.vimrc-support-vim-mode[data-vim-mode=replace] {
     background-color: var(--color-red);
+}
+
+/* ------------------- */
+/* Accent themes — spotlight callouts and tags by topic. */
+/* Per GitHub brand guidance, vibrant colors used sparingly. */
+/* Tag highlighting works in Reading view; in Live Preview tag names */
+/* aren't exposed via CSS selectors. */
+/* ------------------- */
+
+/* Copilot accent — AI-related content (Copilot Purple #8534F3) */
+body.copilot-accent .callout[data-callout="ai"],
+body.copilot-accent .callout[data-callout="copilot"],
+body.copilot-accent .callout[data-callout="gpt"],
+body.copilot-accent .callout[data-callout="llm"],
+body.copilot-accent .callout[data-callout="prompt"] {
+    --callout-color: 133, 52, 243;
+}
+
+body.copilot-accent a.tag[href="#ai"],
+body.copilot-accent a.tag[href^="#ai/"],
+body.copilot-accent a.tag[href="#copilot"],
+body.copilot-accent a.tag[href^="#copilot/"],
+body.copilot-accent a.tag[href="#gpt"],
+body.copilot-accent a.tag[href^="#gpt/"],
+body.copilot-accent a.tag[href="#llm"],
+body.copilot-accent a.tag[href^="#llm/"],
+body.copilot-accent a.tag[href="#prompt"],
+body.copilot-accent a.tag[href^="#prompt/"] {
+    background-color: #8534F3;
+    color: #ffffff;
+    border-color: transparent;
+}
+
+/* Security accent — sensitive content (Security Blue #3094FF) */
+body.security-accent .callout[data-callout="security"],
+body.security-accent .callout[data-callout="secret"],
+body.security-accent .callout[data-callout="encrypted"],
+body.security-accent .callout[data-callout="private"],
+body.security-accent .callout[data-callout="vault"] {
+    --callout-color: 48, 148, 255;
+}
+
+body.security-accent a.tag[href="#security"],
+body.security-accent a.tag[href^="#security/"],
+body.security-accent a.tag[href="#secret"],
+body.security-accent a.tag[href^="#secret/"],
+body.security-accent a.tag[href="#encrypted"],
+body.security-accent a.tag[href^="#encrypted/"],
+body.security-accent a.tag[href="#private"],
+body.security-accent a.tag[href^="#private/"],
+body.security-accent a.tag[href="#vault"],
+body.security-accent a.tag[href^="#vault/"] {
+    background-color: #3094FF;
+    color: #ffffff;
+    border-color: transparent;
 }
