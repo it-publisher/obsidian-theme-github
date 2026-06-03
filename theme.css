@@ -1372,6 +1372,18 @@ select:focus,
     color: var(--text-normal);
 }
 
+/* Enable OpenType ligatures for monospace contexts (Monaspace, JetBrains Mono, Fira Code, etc.) */
+code,
+pre,
+.cm-editor,
+.cm-line,
+.markdown-rendered code,
+.markdown-rendered pre,
+.HyperMD-codeblock {
+    font-feature-settings: "calt", "liga", "ss01";
+    font-variant-ligatures: contextual;
+}
+
 /* kbd tag — GitHub style */
 kbd,
 .markdown-rendered kbd {
