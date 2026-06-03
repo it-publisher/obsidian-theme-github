@@ -26,7 +26,9 @@
 - [Kanban](https://github.com/obsidian-community/obsidian-kanban) board has been styled to look like a GitHub Projects
 - Callouts in GitHub style
 - Inline code blocks in GitHub style
+- `<kbd>` tags in GitHub style
 - Obsidian UI buttons in GitHub style
+- GitHub **Dark Dimmed** palette variant
 
 ## Theme Settings
 
@@ -35,9 +37,11 @@ Theme settings can be find in the [Style Settings](https://github.com/obsidian-c
 Current settings include:
 
 - Header colors
+- Headers underline (H1, H2)
 - On/Off kanban styles
 - On/Off callout styles
 - Colorblind colorscheme variants
+- Dark Dimmed variant (applies on Dark theme)
 
 ## How to Install
 
