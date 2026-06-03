@@ -728,7 +728,7 @@ body {
     --text-error: var(--color-red);
     --text-success: var(--color-green);
     --text-selection: hsla(var(--color-accent-hsl), 0.2);
-    --text-highlight-bg: rgba(255, 208, 0, 0.4);
+    --text-highlight-bg: rgba(216, 189, 14, 0.4);
     --text-accent: var(--color-accent);
     --text-accent-hover: var(--color-accent-2);
     --interactive-normal: var(--color-base-00);
@@ -750,12 +750,11 @@ body {
     /*--color-green: #7ee787;*/
     --color-green-rgb: 15, 191, 62;
     --color-green: #0FBF3E;
-    /*--color-orange: #ffa657;*/
-    --color-orange: #c9510c;
+    --color-orange: #F08A3A;
     --color-yellow: #d29922;
     --color-cyan: #a5d6ff;
     --color-blue: #3094FF;
-    --color-purple: #d2a8ff;
+    --color-purple: #B870FF;
     --color-pink: #f778ba;
 
     --color-base-00: #0d1117;
@@ -789,7 +788,7 @@ body {
     --background-secondary-alt: var(--color-base-25);
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
     --background-modifier-cover: rgba(10, 10, 10, 0.4);
-    --text-highlight-bg: rgba(255, 208, 0, 0.4);
+    --text-highlight-bg: rgba(216, 189, 14, 0.4);
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
     --text-selection: hsla(var(--interactive-accent-hsl), 0.4);
     --input-shadow: inset 0 0 0 1px #f0f6fc1a;
@@ -807,8 +806,8 @@ body {
     --h5-color-theme: var(--color-green);
     --h6-color-theme: var(--color-green);
     --background-modifier-hover-alpha: 0.12;
-    --color-btn-primary-bg: #238636;
-    --color-btn-primary-hover-bg: #2ea043;
+    --color-btn-primary-bg: #08872B;
+    --color-btn-primary-hover-bg: #0FBF3E;
 
     /* Kanban colors */
     --kanban-background: var(--background-primary);
@@ -841,11 +840,11 @@ body {
     --color-red: #cf222e;
     --color-green-rgb: 15, 191, 62;
     --color-green: #0FBF3E;
-    --color-orange: #d96c00;
+    --color-orange: #C53211;
     --color-yellow: #bd8e37;
     --color-cyan: #2db7b5;
     --color-blue: #3094FF;
-    --color-purple: #876be0;
+    --color-purple: #8534F3;
     --color-pink: #c32b74;
 
     --color-base-00: #ffffff;
@@ -880,7 +879,7 @@ body {
     --background-secondary-alt: var(--color-base-05);
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
     --background-modifier-cover: rgba(220, 220, 220, 0.4);
-    --text-highlight-bg: rgba(255, 208, 0, 0.4);
+    --text-highlight-bg: rgba(216, 189, 14, 0.4);
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
     --input-shadow: inset 0 0 0 1px #1b1f2426;
     --input-shadow-hover: inset 0 0 0 1px #1b1f2426;
