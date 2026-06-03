@@ -4,18 +4,32 @@ name: GitHub theme settings
 id: id
 settings:
     -
-        # Colorblind 
+        # Dark variants
+
+        id: dark-variants
+        title: Dark variants
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: dark-dimmed
+        title: GitHub Dark Dimmed
+        description: Softer dark palette based on GitHub Dark Dimmed (applies only when theme is set to Dark)
+        type: class-toggle
+
+    -
+        # Colorblind
 
         id: colorblind
         title: Colorblind variants
         type: heading
         level: 1
         collapsed: true
-    - 
+    -
         id: colorblind_protan-deutan
         title: Protanopia & Deuteranopia
         type: class-toggle
-    -        
+    -
         id: colorblind_tritan
         title: Tritanopia
         type: class-toggle
@@ -903,11 +917,64 @@ body.colorblind_tritan.theme-light {
     --color-btn-primary-hover-bg: #0969da;
 }
 
+/* Dark Dimmed — softer variant of GitHub Dark */
+body.dark-dimmed.theme-dark {
+    --color-red-rgb: 229, 83, 75;
+    --color-red: #e5534b;
+    --color-green-rgb: 87, 171, 90;
+    --color-green: #57ab5a;
+    --color-orange: #cc6b2c;
+    --color-yellow: #c69026;
+    --color-cyan: #56d4dd;
+    --color-blue: #539bf5;
+    --color-purple: #986ee2;
+    --color-pink: #e275ad;
+
+    --color-base-00: #1c2128;
+    --color-base-05: #22272e;
+    --color-base-10: #22272e;
+    --color-base-20: #2d333b;
+    --color-base-25: #1c2128;
+    --color-base-30: #444c56;
+    --color-base-35: #373e47;
+    --color-base-40: #444c56;
+    --color-base-50: #768390;
+    --color-base-70: #adbac7;
+    --color-base-100: #cdd9e5;
+
+    --accent-h-theme: 213;
+    --accent-s-theme: 88%;
+    --accent-l-theme: 64%;
+
+    --inline-code-background: #76839033;
+    --input-shadow: inset 0 0 0 1px #adbac71a;
+    --input-shadow-hover: inset 0 0 0 1px var(--color-base-70);
+
+    --h-color-theme: var(--color-green);
+    --h1-color-theme: var(--color-green);
+    --h2-color-theme: var(--color-green);
+    --h3-color-theme: var(--color-green);
+    --h4-color-theme: var(--color-green);
+    --h5-color-theme: var(--color-green);
+    --h6-color-theme: var(--color-green);
+
+    --color-btn-primary-bg: #347d39;
+    --color-btn-primary-hover-bg: #46954a;
+
+    --kanban-lane-border: var(--color-base-35);
+    --kanban-lane-count: var(--color-base-35);
+    --kanban-options-btn: var(--color-base-30);
+}
+
 /* Tables */
-.markdown-rendered td, 
+.markdown-rendered table {
+    font-size: var(--font-text-size);
+}
+.markdown-rendered td,
 .markdown-rendered th {
     padding: var(--size-2-3) var(--size-4-3);
-} 
+    font-size: inherit;
+}
 .markdown-rendered th {
     text-align: center;
 }
@@ -919,8 +986,12 @@ body.colorblind_tritan.theme-light {
 button {
     transition: 80ms cubic-bezier(0.33, 1, 0.68, 1);
 }
-button:hover {
+button:not(:disabled):hover {
     cursor: var(--cursor-link);
+}
+button:disabled,
+button:disabled:hover {
+    cursor: not-allowed;
 }
 button.mod-cta {
     background-color: var(--color-btn-primary-bg);
@@ -1233,13 +1304,30 @@ select:focus, .dropdown:focus {
     color: var(--text-normal);
 }
 
-/* Underline for the top level headers */
+/* kbd tag — GitHub style */
+kbd,
+.markdown-rendered kbd {
+    display: inline-block;
+    padding: 3px 5px;
+    font: 11px/10px var(--font-monospace);
+    color: var(--text-normal);
+    vertical-align: middle;
+    background-color: var(--color-base-10);
+    border: 1px solid var(--color-base-30);
+    border-radius: 6px;
+    box-shadow: inset 0 -1px 0 var(--color-base-30);
+}
 
-body.h1-underline h1, body.h1-underline.markdown-rendered h1 {
+/* Underline for the top level headers */
+/* Reading view uses <h1>/<h2>; Live Preview uses .HyperMD-header-1/-2 lines */
+
+body.h1-underline h1,
+body.h1-underline .HyperMD-header-1 {
     padding-bottom: .3em;
     border-bottom: 1px solid var(--color-base-40);
 }
-body.h2-underline h2, body.h2-underline.markdown-rendered h2 {
+body.h2-underline h2,
+body.h2-underline .HyperMD-header-2 {
     padding-bottom: .3em;
     border-bottom: 1px solid var(--color-base-40);
 }
