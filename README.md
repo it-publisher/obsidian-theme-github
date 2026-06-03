@@ -29,6 +29,8 @@
 - `<kbd>` tags in GitHub style
 - Obsidian UI buttons in GitHub style
 - GitHub **Dark Dimmed** palette variant
+- Custom task list icons (Tasks plugin syntax: `- [!]`, `- [?]`, `- [*]`, `- [/]`, `- [P]` for PRs, etc.)
+- Vim mode indicator in status bar (requires [Vimrc Support](https://github.com/esm7/obsidian-vimrc-support))
 
 ## Theme Settings
 
